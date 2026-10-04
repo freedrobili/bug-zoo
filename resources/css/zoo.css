@@ -357,7 +357,7 @@
     position: sticky;
     top: 100px; /* Space for fixed header */
     align-self: start;
-    padding: 20px;
+    padding: 12px;
     border: 1px solid var(--line);
     border-radius: var(--radius-md);
     background: var(--bg-2);
@@ -371,8 +371,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 8px;
-    margin-bottom: 16px;
-    padding-bottom: 12px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
     border-bottom: 1px solid var(--line);
 }
 .journal h2 {
@@ -443,8 +443,17 @@
 .checklist__copy { display: grid; gap: 2px; min-width: 0; }
 .checklist__copy b { font-size: 13px; font-weight: 600; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .checklist__copy em { font-style: normal; color: var(--mute); font-size: 12px; }
-.answer { display: none; margin: 0 8px 8px 36px; color: var(--accent-2); font-size: 12px; line-height: 1.4; }
+.answer {
+    display: none;
+    margin: 0 8px 8px 36px;
+    color: var(--accent-2);
+    font-size: 12px;
+    line-height: 1.4;
+    max-height: 150px;
+    overflow-y: auto;
+}
 .journal.is-hints .answer { display: block; }
+
 .win { margin-top: 16px; text-align: center; color: var(--ok); font-weight: 700; font-size: 14px; padding: 16px; background: rgba(25, 135, 84, 0.1); border-radius: var(--radius-md); border: 1px solid rgba(25, 135, 84, 0.2); }
 
 .btn--ghost {
