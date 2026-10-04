@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=syne:600,700,800|outfit:400,500,600" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <style>
+        .mast__nav { display: flex; gap: 1rem; margin: 1rem 0; flex-wrap: wrap; }
+    </style>
 </head>
 <body class="zoo">
     <div class="zoo-grain" aria-hidden="true"></div>
@@ -33,7 +36,17 @@
                 <p class="mast__sub">локальная лаборатория дефектов</p>
             </div>
         </div>
-        <p class="mast__meta">офлайн · без ключей · {{ $bugs->count() }} вольеров</p>
+        <nav class="mast__nav">
+            <a href="{{ route('zoo.index') }}" class="nav-link {{ request()->routeIs('zoo.index') ? 'active' : '' }}">Главная</a>
+            <a href="{{ route('zoo.planets') }}" class="nav-link {{ request()->routeIs('zoo.planets') ? 'active' : '' }}">Планеты</a>
+        </nav>
+        <p class="mast__meta">
+            @if(isset($bugs))
+                офлайн · без ключей · {{ $bugs->count() }} вольеров
+            @else
+                офлайн · без ключей
+            @endif
+        </p>
     </header>
 
     <main>
