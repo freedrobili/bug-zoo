@@ -360,7 +360,7 @@
 .journal h2 { margin: 0; font: 700 1.2rem Syne, sans-serif; }
 .hint-toggle { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--mute); cursor: pointer; }
 .meter { height: 8px; border-radius: var(--radius-full); background: var(--bg-2); overflow: hidden; margin: 14px 0 8px; }
-.meter i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--accent-2), var(--accent)); transition: width 0.35s; }
+.meter i { display: block; height: 100%; background: linear-gradient(90deg, var(--accent-2), var(--accent)); transform: scaleX(0); transform-origin: left; transition: transform 0.35s; }
 .journal__count { color: var(--mute); margin: 0 0 12px; }
 .checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
 .checklist label {
