@@ -14,4 +14,9 @@ class ZooController extends Controller
             'categories' => $catalog->categories(),
         ]);
     }
+
+    public function planets(): View
+    {
+        return view('zoo.planets');
+    }
 }

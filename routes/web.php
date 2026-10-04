@@ -4,3 +4,4 @@ use App\Http\Controllers\ZooController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', ZooController::class)->name('zoo.index');
+Route::get('/planets', [ZooController::class, 'planets'])->name('zoo.planets');
