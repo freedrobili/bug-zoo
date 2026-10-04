@@ -30,7 +30,7 @@
     <div class="stage">
         <section id="exhibits" class="pens" aria-label="Вольеры">
             @foreach ($bugs as $bug)
-                @include($bug->exhibitView(), ['bug' => $bug])
+                @includeIf($bug->exhibitView(), ['bug' => $bug])
             @endforeach
         </section>
 
