@@ -8,9 +8,6 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=syne:600,700,800|outfit:400,500,600" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <style>
-        .mast__nav { display: flex; gap: 1rem; margin: 1rem 0; flex-wrap: wrap; }
-    </style>
 </head>
 <body class="zoo">
     <div class="zoo-grain" aria-hidden="true"></div>
